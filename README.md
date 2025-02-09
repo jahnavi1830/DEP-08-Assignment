@@ -6,11 +6,13 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Array
 |  |
 | ------- |
+| [0001-two-sum](https://github.com/jahnavi1830/leetcode_probs/tree/master/0001-two-sum) |
 | [0209-minimum-size-subarray-sum](https://github.com/jahnavi1830/leetcode_probs/tree/master/0209-minimum-size-subarray-sum) |
 | [0347-top-k-frequent-elements](https://github.com/jahnavi1830/leetcode_probs/tree/master/0347-top-k-frequent-elements) |
 ## Hash Table
 |  |
 | ------- |
+| [0001-two-sum](https://github.com/jahnavi1830/leetcode_probs/tree/master/0001-two-sum) |
 | [0003-longest-substring-without-repeating-characters](https://github.com/jahnavi1830/leetcode_probs/tree/master/0003-longest-substring-without-repeating-characters) |
 | [0347-top-k-frequent-elements](https://github.com/jahnavi1830/leetcode_probs/tree/master/0347-top-k-frequent-elements) |
 ## Divide and Conquer

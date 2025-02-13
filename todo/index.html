@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TODO-APP</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <main>
+        <section class="todo">
+            <h1 style="text-align: center;">TODO-LIST</h1>
+            <div class="todo-form">
+                <input id="todo-input" class="form-input" type="text" name="todo" placeholder="Enter your todo">
+                <button id="add-todo" type="submit">Add</button>
+            </div>     
+            <ul id="todo-list" class="todo-list"></ul>
+        </section>
+    </main>
+    <script>
+        document.getElementById("add-todo").addEventListener("click", function() {
+            const input = document.getElementById("todo-input");
+            const todoText = input.value.trim();
+            if (todoText === "") return;
+
+            const li = document.createElement("li");
+            li.classList.add("todo-item");
+            li.innerHTML = `<input type="checkbox" class="todo-checkbox"> <span class="todo-text">\${todoText}</span> <button class="delete-btn" type="submit">Delete</button>`;
+            document.getElementById("todo-list").appendChild(li);
+            input.value = "";
+        });
+
+        document.getElementById("todo-list").addEventListener("click", function(e) {
+            if (e.target.classList.contains("delete-btn")) {
+                e.target.parentElement.remove();
+            }
+        });
+
+        document.getElementById("todo-list").addEventListener("change", function(e) {
+            if (e.target.classList.contains("todo-checkbox")) {
+                const textElement = e.target.nextElementSibling;
+                if (e.target.checked) {
+                    textElement.classList.add("completed");
+                } else {
+                    textElement.classList.remove("completed");
+                }
+            }
+        });
+    </script>
+</body>
+</html>
